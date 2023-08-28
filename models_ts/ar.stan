@@ -5,10 +5,9 @@ data {
    vector[N_te] y_te;
 }
 parameters {
-    real alpha0;
+    real alpha0;  // 初期値t=1のyを推定するためのパラメータ
     real alpha;
     real beta;
-    // real<lower=0, upper=2> sigma0;
     real<lower=0> sigma;
 }
 model {
